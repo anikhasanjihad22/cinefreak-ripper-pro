@@ -1,0 +1,14 @@
+Order deny,allow
+Deny from all
+
+<Files "proxy-fetch.php">
+    Allow from all
+</Files>
+
+<Files "proxy-stream.php">
+    Allow from all
+</Files>
+
+# Block config & storage
+RedirectMatch 403 /storage/
+RedirectMatch 403 /includes/
